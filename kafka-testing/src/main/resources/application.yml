@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: kafka-testing-app
+  cloud:
+    stream:
+      bindings:
+        process-in-0:
+          destination: words
+        process-out-0:
+          destination: capitalized
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+
+logging:
+  level:
+    org.homeworks.tech: info
+
+
